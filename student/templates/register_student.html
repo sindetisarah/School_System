@@ -1,0 +1,198 @@
+{% extends 'cal/base.html' %}
+
+{% block title %}
+Student
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Register</title>
+</head>
+
+<body>
+    
+
+    <style>
+        .container {
+            margin-top: 10px;
+            background-color: white;
+            margin-left: 30%;
+            width: 500px;
+            border:3px solid purple;
+            box-shadow: 8px 8px 8px 9px rgb(179, 123, 179);
+            border-radius: 10px;
+
+        }
+        button{
+            background-color: purple;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+          
+            align-items: center;
+            width: 300px;
+
+        }
+        h1  
+         {padding-top: 10px;
+             color:purple;
+            margin-left: 100px;
+        }
+        p    
+        {color: red;}
+        form{
+            padding-top: 20px;
+            padding-left: 80px;
+            padding-bottom: 20px;
+        }
+        .form-group{
+            border-color: purple;
+        }
+        #akiralogo{
+            width: 60px;
+            height:70px;
+            padding-bottom: 10px;
+            margin-left: 20px;
+        }
+        hr{
+            background-color:purple;
+            height: 3px;
+        }
+       
+        </style>
+    
+    <div class="container">
+        <hr>
+        <h1>Register Here</h1>
+        
+        <form method="POST" enctype="multipart/form-data">
+            <img id="akiralogo" src="/media/profile_pics/code-hive.png">
+            <br>
+
+            {% csrf_token %}
+            <label for="first_name">First_name:</label>
+            <div class="form-group">
+                {{ form.first_name}}
+            </div> 
+            <label for="second_name">Second_name:</label>
+            <div class="form-group">
+                {{ form.second_name}}
+            </div> 
+            <label for="gender">Gender:</label>
+            <div class="form-group">
+                {{ form.gender}}
+            </div>
+
+            <label for="gender">Age:</label>
+            <div class="form-group">
+                {{ form.age}}
+            </div>
+
+            <label for="gender">Date of Birth:</label>
+            <div class="form-group">
+                {{ form.date_of_birth}}
+            </div>
+
+            <label for="gender">Nationality:</label>
+            <div class="form-group">
+                {{ form.nationality}}
+            </div>
+            <label for="email">Email:</label>
+           <div class="form-group">
+                {{ form.email}}
+            </div>
+            <label for="class_name">Class_name:</label>
+            <div class="form-group">
+                {{ form.class_name}}
+            </div>
+            <label for="students_contact">Student_Contact:</label>
+            <div class="form-group">
+                {{ form.students_contact}}
+            </div>
+
+            <label for="state">State:</label>
+             <div class="form-group">
+                {{ form.state}}
+            </div>
+
+            <label for="city">City:</label>
+            <div class="form-group">
+                {{ form.city}}
+            </div> 
+            <label for="gender">Parents_Contact</label>
+            <div class="form-group">
+                {{ form.parents_contact}}
+            </div>
+           
+           
+            <label for="parent_name">Parent_name</label>
+            <div class="form-group">
+                {{ form.parents_name}}
+            </div>
+
+            <label for="ACADEMIC">Academic_year</label>
+            <div class="form-group">
+                {{ form.academic_year}}
+            </div>
+
+            <label for="admission">Admission date</label>
+            <div class="form-group">
+                {{ form.admission_date}}
+            </div>
+
+            <label for="city">Health_report</label>
+            <div class="form-group">
+                {{ form.health_report}}
+            </div>
+
+            <label for="city">Profile_image</label>
+            <div class="form-group">
+                {{ form.profile_image}}
+            </div>
+
+        <button type="submit" class="register" data-toggle="modal" data-target="#submitModal">
+                REGISTER
+            </button>
+
+            
+
+        </form>
+    </div>
+    
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</body>
+
+</html>
+
+
+{% endblock content %}

@@ -1,0 +1,51 @@
+.myContainer {
+    background-color: white;
+    margin: 2% 25%;
+    box-shadow: 35px 35px 35px 15px rgb(236, 230, 236);
+    border: 2px solid purple;
+    border-radius: 5px;
+}
+
+.container {
+    margin-top: 10px;
+    background-color: white;
+    margin-left: 30%;
+    width: 500px;
+    border:3px solid purple;
+    box-shadow: 8px 8px 8px 9px rgb(179, 123, 179);
+
+}
+button{
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+  
+    align-items: center;
+    width: 300px;
+
+}
+h1  
+ {padding-top: 10px;
+     color:purple;
+    margin-left: 100px;
+}
+p    
+{color: red;}
+form{
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-bottom: 20px;
+}
+.form-group{
+    border-color: purple;
+}
+#akiralogo{
+    width: 60px;
+    height:70px;
+    padding-bottom: 10px;
+}
+hr{
+    background-color:purple;
+    height: 3px;
+}
