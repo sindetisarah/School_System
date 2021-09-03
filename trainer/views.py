@@ -1,4 +1,5 @@
 from django import forms
+from trainer.models import Trainer
 from trainer.forms import TrainerRegistarationForm
 from django.shortcuts import render
 
@@ -17,3 +18,9 @@ def register_trainer(request):
         "form":form
     })
 
+def trainer_list(request):
+    trainers=Trainer.objects.all()
+    return render(request,"trainer_list.html",{
+        "trainers":trainers
+
+    })

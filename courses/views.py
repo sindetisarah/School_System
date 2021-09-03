@@ -20,6 +20,9 @@ def course(request, event_id=None):
     return render(request, 'course/add_course.html', {'form': form})
 
 def course_layout(request):
-    return render(request, 'course/course.html')
+    courses=Course.objects.all()
+    return render(request, 'course/course.html',{
+        "courses":courses
+    })
 
 

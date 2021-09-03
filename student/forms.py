@@ -1,6 +1,5 @@
 from django import forms
 from django.db.models.base import Model
-from django.db.models.enums import Choices
 from django.db.models.fields import IntegerField
 from django.forms import TextInput,EmailInput
 from django.forms.widgets import  ClearableFileInput, DateInput, FileInput, NumberInput, Select, SelectDateWidget

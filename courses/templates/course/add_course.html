@@ -5,6 +5,9 @@ Add Course
 {% endblock %}
 
 {% block content %}
+<div class="clearfix">
+    <a class="btn info" href="{% url 'course' %}"> VIEW COURSES </a>
+  </div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +30,24 @@ Add Course
 </head>
 <body>
     <style>
+        .info {
+    border-color: purple;
+    color:purple;
+  }
+  
+  .info:hover {
+    background:palevioletred;
+    color: white;
+  }
+  .info {
+    border-color: purple;
+    color:purple;
+  }
+  
+  .info:hover {
+    background:purple;
+    color: white;
+  }
        
         .container {
             margin-top: 10px;
@@ -34,7 +55,7 @@ Add Course
             margin-left: 30%;
             width: 500px;
             border:3px solid purple;
-            box-shadow: 8px 8px 8px 9px rgb(179, 123, 179);
+            box-shadow: 8px 8px 8px 9px purple;
             border-radius: 10px;
 
         }

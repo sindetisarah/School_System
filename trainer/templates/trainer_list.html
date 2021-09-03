@@ -1,6 +1,6 @@
 {% extends 'cal/base.html' %}
 {% block title %}
-Students List
+Trainers List
 {% endblock %}
 {% block content %}
 <!DOCTYPE html>
@@ -9,11 +9,16 @@ Students List
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student List</title>
+    <title>Trainers List</title>
 </head>
 <body>
     <style>
-    body{
+        table, th, td {
+           border: 1px solid purple;
+           border-collapse: collapse;
+
+        }
+        body{
         margin: 0;
         padding: 0;
        
@@ -41,20 +46,21 @@ Students List
         background-color:rgb(255, 255, 255);
     }
         
+        
             
      </style>
     <table>
         <tr>
             <th>First Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
+            <th>Second Name</th>
+            <th>Course</th>
         </tr>
    
-    {% for student in students %}
+    {% for trainer in trainers %}
     <tr>
-    <td>{{ student.first_name}}</td>
-    <td>{{ student.second_name}}</td>
-    <td>{{ student.age}}</td>
+    <td>{{ trainer.first_name}}</td>
+    <td>{{ trainer.second_name}}</td>
+    <td>{{ trainer.course}}</td>
 
     </tr>
     {% endfor %}
